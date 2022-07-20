@@ -1,4 +1,4 @@
-import os,random,sys,string
+import random,sys,string
 from lark import Lark, Transformer, Token
 
 args = sys.argv
@@ -718,7 +718,7 @@ for incl in includes:
 generated += g
 generated += "int main(){main_%s();}" % funcname
 
-infilename = infile.split(".txt")[0]
+infilename = infile.split(".toronto")[0]
 
 with open("%s.cpp" % infilename,"w+") as f:
 	f.write(generated)
